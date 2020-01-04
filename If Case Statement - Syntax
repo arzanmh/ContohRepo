@@ -1,0 +1,16 @@
+#!/bin/bash
+
+If  [-z $1]
+then
+order=”Jenis Aplikasi”
+elif [ -n $1]
+then
+order=$1
+fi
+		case $order in
+			“gojek”) echo “Harga $order Rp.2000/km”;;
+“gocar”) echo “Harga $order Rp.6000/km”;;
+“grabike”) echo “Harga $order Rp.2500/km + Diskon 5% untuk order >10 km”;;
+“grabcar”) echo “Harga $order Rp.7000/km + Diskon 10% untuk order >10 km”;;
+*) echo “Maaf, $order belum terdaftar”;;
+		esac
